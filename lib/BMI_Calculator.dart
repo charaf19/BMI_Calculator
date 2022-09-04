@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:bmi_calculator/BMI_resust_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -267,7 +270,17 @@ class _BmiScreenState extends State<BmiScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              double result = weight / pow(height / 100, 2);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => BmiResultScreen(
+                            isMale: isMale,
+                            age: age,
+                            result: result,
+                          )));
+            },
           ),
         )
       ]),
