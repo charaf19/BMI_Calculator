@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:bmi_calculator/BMI_Calculator.dart';
+import 'package:bmi_calculator/modules/bmi_main_screen/BMI_Calculator.dart';
 
 class BmiResultScreen extends StatelessWidget {
   final bool isMale;
